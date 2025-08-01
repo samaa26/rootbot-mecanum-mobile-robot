@@ -1,0 +1,8 @@
+<library path="lib/rrt_global_planner">
+  <class name="rrt_planner/RRTGlobalPlanner" type="rrt_global_planner.RRTGlobalPlanner" base_class_type="nav_core::BaseGlobalPlanner">
+    <description>
+      RRT (Rapidly-exploring Random Tree) global planner plugin for move_base.
+      This planner uses RRT algorithm to find paths and visualizes the tree growth in RViz.
+    </description>
+  </class>
+</library>
