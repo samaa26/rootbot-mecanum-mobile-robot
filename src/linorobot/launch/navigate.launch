@@ -1,0 +1,18 @@
+<launch>
+    <!-- Map server -->
+    <!-- <arg name="map_file" default="$(find linorobot)/maps/A_third_floor.yaml"/>
+    <node pkg="map_server" name="map_server"  type="map_server" args="$(arg map_file)" /> -->
+    <!-- <arg name="map_file" default="$(find linorobot)/maps/my_room.yaml"/>
+    <node pkg="map_server" name="map_server"  type="map_server" args="$(arg map_file)" /> -->
+    <include file="$(find linorobot)/launch/gmapping.launch" /> 
+
+    <!-- AMCL used for localization -->
+    <!-- <include file="$(find linorobot)/launch/include/amcl.launch" /> -->
+    
+    <!-- Calls navigation stack packages for compatible Linorobot base -->
+    <!-- Takes reference from env variable LINOBASE. ie. export LINOBASE=2wd -->
+    <include file="$(find linorobot)/launch/include/move_base/move_base_mecanum.launch" />
+    <!-- <include file="$(find results)/launch/results.launch" /> -->
+
+    
+</launch>
