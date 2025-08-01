@@ -1,0 +1,8 @@
+
+<launch>
+    <node pkg="results" type="Astar.py" name="planner_benchmark" output="screen">
+    <param name="planner_name" value="DWA" />
+  </node>
+
+    
+</launch>
