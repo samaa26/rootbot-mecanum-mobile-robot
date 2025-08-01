@@ -1,0 +1,81 @@
+# Global planner selection - Note the different plugin name
+# base_global_planner: "rrt_global_planner/RRTGlobalPlanner"
+base_global_planner: global_planner/GlobalPlanner
+# base_local_planner: dwa_local_planner/DWAPlannerROS
+base_local_planner: teb_local_planner/TebLocalPlannerROS
+
+# # Global planner settings
+# RRTGlobalPlanner:
+#   step_size: 0.5                    # Reduced step size for better obstacle avoidance
+#   goal_tolerance: 0.8               # Tighter goal tolerance
+#   max_iterations: 15000             # Increased iterations for complex environments
+#   collision_check_resolution: 0.1   # Much finer collision checking
+#   use_deterministic: true           # Keep deterministic for debugging
+#   robot_radius: 0.35               # Define robot radius explicitly
+# # Traditional RRT Global Planner parameters
+# RRTGlobalPlannerTrad:
+#   step_size: 1.0                    # Traditional fixed step size
+#   goal_tolerance: 1.0               # Traditional goal tolerance
+#   max_iterations: 10000              # Traditional iteration limit
+# base_global_planner: global_planner/GlobalPlanner
+# base_global_planner: "rrt_global_planner/RRTGlobalPlanner"
+# base_local_planner: teb_local_planner/TebLocalPlannerROS
+# base_local_planner: dwa_local_planner/DWAPlannerROS
+# base_local_planner: base_local_planner/TrajectoryPlannerROS
+# base_local_planner: apf_local_planner/APFPlanner
+# GlobalPlanner:
+#   use_dijkstra: true           # Set to false to use A* algorithm
+#   use_grid_path: false         
+#   use_quadratic: true         
+#   old_navfn_behavior: false
+#   allow_unknown: true
+#   publish_potential: true
+#   visualize_potential: false
+#   # orientation_mode: 0            # For holonomic movement
+#   orientation_window_size: 1
+
+# shutdown_costmaps: false
+
+# controller_frequency: 5.0
+# controller_patience: 3.0
+
+# planner_frequency: 0.5
+# planner_patience: 5.0
+
+# oscillation_timeout: 10.0
+# oscillation_distance: 0.2
+
+# conservative_reset_dist: 0.1
+
+# cost_factor: 1.0
+# neutral_cost: 55
+# lethal_cost: 253
+
+GlobalPlanner:
+  use_dijkstra: false           # Set to false to use A* algorithm
+  use_grid_path: true         
+  use_quadratic: true         
+  old_navfn_behavior: false
+  allow_unknown: false
+  publish_potential: true
+  visualize_potential: false
+  # orientation_mode: 0            # For holonomic movement
+  orientation_window_size: 1
+
+
+shutdown_costmaps: false
+
+controller_frequency: 5.0
+controller_patience: 3.0
+
+planner_frequency: 0.5
+planner_patience: 5.0
+
+oscillation_timeout: 10.0
+oscillation_distance: 0.2
+
+conservative_reset_dist: 0.1
+
+cost_factor: 1.0
+neutral_cost: 55
+lethal_cost: 253

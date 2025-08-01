@@ -1,0 +1,11 @@
+GlobalPlanner:
+  allow_unknown: true                # Allow path planning through unknown space
+  default_tolerance: 0.1            # Distance tolerance for goal acceptance
+  visualize_potential: false        # Whether to visualize the potential field
+  use_dijkstra: true               # Use Dijkstra's algorithm
+  use_quadratic: true               # Use quadratic approximation
+  use_grid_path: true              # Follow grid cells more precisely
+  old_navfn_behavior: false         # If true, mimics NavfnROS behavior
+
+  
+  
